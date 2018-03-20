@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+/* Table Gradient styles */
+.table-responsive.gradient-tbl {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to top, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-responsive.gradient-tbl.historical-tbl {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to bottom, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+}
+.ow-to-table{
+    margin-bottom: 30px;
+}
+
+.ow-to-table:nth-child(2) {
+    margin-bottom: 0px;
+}
+
+// Historical Data Styling
+.historical-container {
+    width: 100%;
+    margin-top: -1px;
+    .row {
+        text-align: center;
+        background: #26c482;
+        color: #ffffff;
+        padding: 20px 0;
+        width: 100%;
+        margin: 0 auto;
+        h3 {
+            margin-top: 0px;
+            text-transform: uppercase;
+        }
+        p {
+            margin-bottom: 25px;
+            color: #dadada;
+        }
+        .mat-form-field {
+            width: 100%;
+            max-width: 250px;
+            ::ng-deep .mat-form-field-ripple {
+                background-color: #ffffff;
+            }
+        }
+        ::ng-deep .mat-form-field-label {
+            color: #ffffff;
+        }
+    }
+}
+
+.rs-row {
+    margin-top: 20px;
+}

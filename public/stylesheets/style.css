@@ -1,0 +1,339 @@
+body {
+  padding: 10px 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  cursor: pointer;
+}
+
+a:hover,
+a:active {
+  color: #00B7FF;
+  text-decoration: underline;
+}
+
+a.danger {
+  color: red;
+}
+
+.spacing {
+  margin-bottom: 20px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.to-riders {
+    display: none;
+}
+
+/*.pre-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -170px 0 0 -120px;
+    padding: 20px;
+    height: 250px;
+    
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 1750ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}*/
+
+/*
+.pre-loader svg {
+    fill: #fff;
+}
+*/
+.svg-container {
+  position: relative;
+}
+.svg-center {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+}
+svg.koi-fish,
+svg.koi-txt {
+  max-width: 200px;
+  position: absolute;
+  left: 50%;
+  display: block;
+}
+svg.koi-fish {
+  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+  position: absolute;
+  left: 10px;
+}
+svg.koi-txt {
+  max-width: 170px;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+}
+.koi-logo-txt {
+  fill: #0075c9;
+  /* -webkit-animation: rotationText 2s infinite linear !important; */
+  width: 100%;
+}
+
+.koi-logo-txt-kay {
+  fill: #0075c9;
+/*  -webkit-animation: dimText 1s infinite;
+  animation: dimText 1s infinite;*/
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+.koi-logo-txt-oh {
+  fill: #0075c9;
+/*  animation: dimText 1s infinite;
+  -webkit-animation: dimText 1s infinite;*/
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+.koi-logo-txt-eye {
+  fill: #0075c9;
+/*  animation: dimText 1s infinite;
+  -webkit-animation: dimText 1s infinite;*/
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+.rotate-fish {
+/*   transform: translate(-30px); */
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes rotationText {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes rotationText {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes dimText {
+    0% {
+        fill: #0075c9;
+    }
+    50% {
+        fill: #000;
+    }
+    100% {
+        fill: #0075c9;
+    }
+}
+@keyframes dimText {
+    0% {
+        fill: #0075c9;
+    }
+    50% {
+        fill: #000;
+    }
+    100% {
+        fill: #0075c9;
+    }
+}
+
+.hide-all-data {
+    display: none;
+}
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+ul > li {
+    margin-bottom: 10px;
+}
+
+#ride-select {
+    background: none;
+    border: none;
+    outline: 2px solid #000;
+    min-width: 150px;
+    margin: 0 auto;
+    display: block;
+    height: 30px;
+    font-size: 14px;
+}
+
+/* Global Table Styling */
+.tbl-hdr-mobile {
+    display: none;
+}
+.all-table > table > tbody> tr > th {
+    background: #0075c9;
+    text-align: center;
+}
+.table-responsive-all.all-table th {
+    text-align: center;
+}
+table.gradient-tbl{
+    width:100%;
+    table-layout: fixed;
+}
+.gradient-tbl h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.gradient-tbl .tbl-header{
+    background-color: rgba(255,255,255,0.3);
+}
+.gradient-tbl .tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.table-responsive.gradient-tbl {
+    padding-top: 20px;
+}
+.gradient-tbl tr > a {
+    padding: 0 10px;
+    line-height: 2.5;
+}
+
+.gradient-tbl tr > th {
+    vertical-align: middle;
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.gradient-tbl tr > td {
+    vertical-align: middle;
+    padding: 15px;
+    text-align: left;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+.gradient-tbl > .tbl-content > table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+@media screen and (max-width: 768px) {
+    th {
+        word-spacing: normal;
+    }
+    table.gradient-tbl {
+        width: 100%;
+        table-layout: inherit;
+    }
+    .gradient-tbl .tbl-hdr-mobile {
+        display: table-header-group;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .gradient-tbl > .tbl-content > table {
+        /*width: auto;*/
+        table-layout: inherit;
+    }
+    .gradient-tbl > .tbl-content > table > .tbl-hdr-mobile {
+        display: table-header-group;
+        background-color: rgba(255,255,255,0.3);
+    }
+    .gradient-tbl > .tbl-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .svg-center {
+        left: 45%;
+    }
+    /*.gradient-tbl > .tbl-header {*/
+        /*display: none;*/
+    /*}*/
+    /*.gradient-tbl > .tbl-content > table > .tbl-hdr-mobile {*/
+        /*display: table-header-group;*/
+        /*background-color: rgba(255,255,255,0.3);*/
+    /*}*/
+}

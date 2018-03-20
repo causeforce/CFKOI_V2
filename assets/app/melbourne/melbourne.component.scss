@@ -1,0 +1,48 @@
+/* gradient table styles */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+.table-responsive.gradient-tbl {
+  background: -webkit-linear-gradient(left, #d9c42e, #ce5500);
+  background: linear-gradient(to top, #d9c42e, #ce5500);
+  font-family: 'Roboto', sans-serif;
+}
+
+.table-responsive.gradient-tbl.historical-tbl {
+  background: -webkit-linear-gradient(left, #d9c42e, #ce5500);
+  background: linear-gradient(to bottom, #d9c42e, #ce5500);
+  font-family: 'Roboto', sans-serif;
+}
+// Historical Data Styling
+.historical-container {
+  width: 100%;
+  margin-top: -1px;
+  .row {
+    text-align: center;
+    background: #d9c42e;
+    color: #000000;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0 auto;
+    h3 {
+      margin-top: 0px;
+      text-transform: uppercase;
+    }
+    p {
+      margin-bottom: 25px;
+      color: #000000;
+    }
+    .mat-form-field {
+      width: 100%;
+      max-width: 250px;
+      ::ng-deep .mat-form-field-ripple {
+        background-color: #000000;
+      }
+    }
+    ::ng-deep .mat-form-field-label {
+      color: #000000;
+    }
+  }
+}
+
+.rs-row {
+  margin-top: 20px;
+}

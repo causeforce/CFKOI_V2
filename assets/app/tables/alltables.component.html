@@ -1,0 +1,354 @@
+
+<div *ngIf="dataService.allTable === true && dataService.data" class="table-responsive all-table">
+    <h3>Today</h3>
+    <p>* x = not applicable data</p>
+    <table class="table table-bordered table-hover">
+        <tr class="text-center">
+            <th>Event Name</th>
+            <th class="text-center">RFI</th>
+            <th class="text-center">RIDERS</th>
+            <th class="text-center">VIRTUAL RIDERS</th>
+            <th class="text-center">CREWS</th>
+            <th class="text-center">WALKERS</th>
+            <th class="text-center">DON$</th>
+            <th class="text-center">REG$</th>
+        </tr>
+        <tr class="data-json"> 
+            <td class="koi-blue">
+               2018 Alberta RTCC
+            </td>
+            <td>{{dataService.data.ab18RFIDaily}}</td>
+            <td>{{dataService.data.ab18RidersDaily}}</td>
+            <td>{{dataService.data.ab18VRDaily}}</td>
+            <td>{{dataService.data.ab18CrewDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.ab18DonDaily}}</td>
+            <td>{{dataService.data.ab18RegFeeDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Montreal RTCC
+            </td>
+            <td>{{dataService.data.mo18RFIDaily}}</td>
+            <td>{{dataService.data.mo18RidersDaily}}</td>
+            <td>{{dataService.data.mo18VRDaily}}</td>
+            <td>{{dataService.data.mo18CrewDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.mo18DonDaily}}</td>
+            <td>{{dataService.data.mo18RegFeeDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Toronto RTCC
+            </td>
+            <td>{{dataService.data.to18RFIDaily}}</td>
+            <td>{{dataService.data.to18RidersDaily}}</td>
+            <td>{{dataService.data.to18VRDaily}}</td>
+            <td>{{dataService.data.to18CrewDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.to18DonDaily}}</td>
+            <td>{{dataService.data.to18RegFeeDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Vancouver RTCC
+            </td>
+            <td>{{dataService.data.va18RFIDaily}}</td>
+            <td>{{dataService.data.va18RidersDaily}}</td>
+            <td>{{dataService.data.va18VRDaily}}</td>
+            <td>{{dataService.data.va18CrewDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.va18DonDaily}}</td>
+            <td>{{dataService.data.va18RegFeeDaily}}</td>
+        </tr> 
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Perth RTCC
+            </td>
+            <td>{{dataService.data.pr18RFIDaily}}</td>
+            <td>{{dataService.data.pr18RidersDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr18CrewDaily}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr18DonDaily}}</td>
+            <td>{{dataService.data.pr18RegFeeDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2018 Brisbane OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.br18RidersDaily}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.br18WalkersDaily}}</td>
+            <td>{{dataService.data.br18DonDaily}}</td>
+            <td>{{dataService.data.br18RegDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2018 Melbourne OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.ml18RidersDaily}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.ml18WalkersDaily}}</td>
+            <td>{{dataService.data.ml18DonDaily}}</td>
+            <td>{{dataService.data.ml18RegDaily}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 OneWalk Toronto
+            </td>
+            <td>{{dataService.data.owto18RFIDaily}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.owto18CrewsDaily}}</td>
+            <td>{{dataService.data.owto18WalkersDaily}}</td>
+            <td>{{dataService.data.owto18DonDaily}}</td>
+            <td>{{dataService.data.owto18RegDaily}}</td>
+        </tr>
+    </table>
+</div>
+
+<div  *ngIf="dataService.allTable === true && dataService.data" class="table-responsive all-table">
+    <h3>Year to Date</h3>
+    <p>* x = not applicable data</p>
+    <table class="table table-bordered table-hover">
+        <tr class="text-center">
+            <th>Event Name</th>
+            <th class="text-center">RFI</th>
+            <th class="text-center">TOTAL PARTICIPANTS</th>
+            <th class="text-center">VIRTUAL RIDERS</th>
+            <th class="text-center">CREWS</th>
+            <th class="text-center">WALKERS</th>
+            <th class="text-center">DON$</th>
+            <th class="text-center">REG$</th>
+        </tr>
+        <tr class="data-json"> 
+            <td class="koi-blue">
+               2018 Alberta RTCC
+            </td>
+            <td>{{dataService.data.ab18RFI}}</td>
+            <td>{{dataService.data.ab18Riders}}</td>
+            <td>{{dataService.data.ab18VR}}</td>
+            <td>{{dataService.data.ab18Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.ab18Donations}}</td>
+            <td>{{dataService.data.ab18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Montreal RTCC
+            </td>
+            <td>{{dataService.data.mo18RFI}}</td>
+            <td>{{dataService.data.mo18Riders}}</td>
+            <td>{{dataService.data.mo18VR}}</td>
+            <td>{{dataService.data.mo18Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.mo18Donations}}</td>
+            <td>{{dataService.data.mo18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Toronto RTCC
+            </td>
+            <td>{{dataService.data.to18RFI}}</td>
+            <td>{{dataService.data.to18TotalParticipants}}</td>
+            <td>{{dataService.data.to18VR}}</td>
+            <td>{{dataService.data.to18Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.to18Donations}}</td>
+            <td>{{dataService.data.to18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Vancouver RTCC
+            </td>
+            <td>{{dataService.data.va18RFI}}</td>
+            <td>{{dataService.data.va18Riders}}</td>
+            <td>{{dataService.data.va18VR}}</td>
+            <td>{{dataService.data.va18Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.va18Donations}}</td>
+            <td>{{dataService.data.va18RegFee}}</td>
+        </tr> 
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 Perth RTCC
+            </td>
+            <td>{{dataService.data.pr18RFI}}</td>
+            <td>{{dataService.data.pr18Riders}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr18Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr18Donations}}</td>
+            <td>{{dataService.data.pr18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2018 Brisbane OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.br18Riders}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.br18Walkers}}</td>
+            <td>{{dataService.data.br18Donations}}</td>
+            <td>{{dataService.data.br18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2018 Melbourne OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.ml18Riders}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.ml18Walkers}}</td>
+            <td>{{dataService.data.ml18Donations}}</td>
+            <td>{{dataService.data.ml18RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2018 OneWalk Toronto
+            </td>
+            <td>{{dataService.data.owTo18RFI}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.owTo18Crews}}</td>
+            <td>{{dataService.data.owTo18Walkers}}</td>
+            <td>{{dataService.data.owTo18Donations}}</td>
+            <td>{{dataService.data.owTo18RegFee}}</td>
+        </tr>
+        <tr class="data-json"> 
+            <td class="koi-blue">
+                2017 Alberta RTCC
+            </td>
+            <td>{{dataService.data.ab17RFI}}</td>
+            <td>{{dataService.data.ab17Riders}}</td>
+            <td>{{dataService.data.ab17VR}}</td>
+            <td>{{dataService.data.ab17Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.ab17Donations}}</td>
+            <td>{{dataService.data.ab17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2017 Montreal RTCC
+            </td>
+            <td>{{dataService.data.mo17RFI}}</td>
+            <td>{{dataService.data.mo17Riders}}</td>
+            <td>{{dataService.data.mo17VR}}</td>
+            <td>{{dataService.data.mo17Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.mo17Donations}}</td>
+            <td>{{dataService.data.mo17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2017 Perth RTCC
+            </td>
+            <td>{{dataService.data.pr17RFI}}</td>
+            <td>{{dataService.data.pr17Riders}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr17Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.pr17Donations}}</td>
+            <td>{{dataService.data.pr17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2017 Toronto RTCC
+            </td>
+            <td>{{dataService.data.to17RFI}}</td>
+            <td>{{dataService.data.to17Riders}}</td>
+            <td>{{dataService.data.to17VR}}</td>
+            <td>{{dataService.data.to17Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.to17Donations}}</td>
+            <td>{{dataService.data.to17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2017 Vancouver RTCC
+            </td>
+            <td>{{dataService.data.va17RFI}}</td>
+            <td>{{dataService.data.va17Riders}}</td>
+            <td>{{dataService.data.va17VR}}</td>
+            <td>{{dataService.data.va17Crews}}</td>
+            <td>x</td>
+            <td>{{dataService.data.va17Donations}}</td>
+            <td>{{dataService.data.va17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2017 Brisbane OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.br17Riders}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.br17Walkers}}</td>
+            <td>{{dataService.data.br17Donations}}</td>
+            <td>{{dataService.data.br17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+               2017 Melbourne OneDay
+            </td>
+            <td>x</td>
+            <td>{{dataService.data.ml17Riders}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.ml17Walkers}}</td>
+            <td>{{dataService.data.ml17Donations}}</td>
+            <td>{{dataService.data.ml17RegFee}}</td>
+        </tr>
+        <tr class="data-json">
+            <td class="koi-blue">
+                2017 OneWalk Toronto
+            </td>
+            <td>{{dataService.data.owTo17RFI}}</td>
+            <td>x</td>
+            <td>x</td>
+            <td>{{dataService.data.owTo17Crews}}</td>
+            <td>{{dataService.data.owTo17Walkers}}</td>
+            <td>{{dataService.data.owTo17Donations}}</td>
+            <td>{{dataService.data.owTo17RegFee}}</td>
+        </tr>
+    </table>
+</div>
+
+<!-- BEGIN Toronto Table -->
+
+<app-toronto [@slideInOut] *ngIf="dataService.toTable === true" class="table-responsive to-table"></app-toronto>
+
+<!-- BEGIN Alberta Table -->
+
+<app-alberta [@slideInOut] *ngIf="dataService.abTable === true" class="table-responsive ab-table"></app-alberta>
+
+<!-- BEGIN Montreal Table -->
+
+<app-montreal [@slideInOut] *ngIf="dataService.moTable === true" class="table-responsive mo-table"></app-montreal>
+
+<!-- BEGIN Vancouver Table -->
+
+<app-vancouver [@slideInOut] *ngIf="dataService.vaTable === true" class="table-responsive va-table"></app-vancouver>
+
+<!-- BEGIN Ride Perth Table -->
+
+<app-perth [@slideInOut] *ngIf="dataService.prTable === true" class="table-responsive pr-table"></app-perth>
+
+<!-- BEGIN OneWalk Toronto Table -->
+
+<app-ow-toronto [@slideInOut] *ngIf="dataService.owtoTable === true" class="table-responsive ow-to-table"></app-ow-toronto>
+
+<!-- BEGIN OneDay Melbourne Table -->
+
+<app-melbourne [@slideInOut] *ngIf="dataService.mlTable === true" class="table-responsive ml-table"></app-melbourne>
+
+<!-- BEGIN OneDay Brisbane Table -->
+
+<app-brisbane [@slideInOut] *ngIf="dataService.brTable === true" class="table-responsive br-table"></app-brisbane>

@@ -1,0 +1,435 @@
+<!-- 
+##############
+##############
+IMPORTANT:
+THIS PAGE IS ONLY HERE AS A BACK UP WAY TO GET THE DATA THE OLD WAY 
+##############
+##############
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <title>KOI Web Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> --}}
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+</head>
+<body>
+<my-app>
+     <div>
+        <img class="pre-loader" src="/img/koi_logo_v2.svg" alt="Koi Logo">
+    </div>
+</my-app>
+<div class="hide-all-data">
+    <!-- Toronto 2018 -->
+    <div class="toronto-2018">
+        <p style="display:none" class="hbs-to18-don">
+            {{to18Donations}}
+        </p>
+        <p style="display:none" class="hbs-to18-reg">
+            {{to18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-to18-regs-daily">
+            {{to18RegFeeDaily}}
+        </p>
+        <p style="display:none" class="hbs-to18-crews">
+            {{to18Crews}}
+        </p>
+        <p style="display:none" class="hbs-to18-crews-daily">
+            {{to18CrewDaily}}
+        </p>
+        <p style="display:none" class="hbs-to18-riders">
+            {{to18Riders}}
+        </p>
+        <p style="display:none" class="hbs-to18-riders-daily">
+            {{to18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-to18-rfi">
+            {{to18RFI}}
+        </p>
+        <p style="display:none" class="hbs-to18-rfi-daily">
+            {{to18RFIDaily}}
+        </p>
+        <p style="display:none" class="hbs-to18-don-daily">
+            {{to18DonDaily}}
+        </p>
+    </div>
+    <!--END Toronto 2018 -->
+    <!-- Toronto 2017 -->
+    <div class="toronto-2017">
+        <p style="display:none" class="hbs-to17-don">
+            {{to17Donations}}
+        </p>
+        <p style="display:none" class="hbs-to17-don-daily">
+            {{to17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-to17-reg">
+            {{to17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-to17-crews">
+            {{to17Crews}}
+        </p>
+        <p style="display:none" class="hbs-to17-riders">
+            {{to17Riders}}
+        </p>
+        <p style="display:none" class="hbs-to17-rfi">
+            {{to17RFI}}
+        </p>
+    </div>
+    <!--END Toronto 2017 -->
+    <!-- Montreal 2018 -->
+    <div class="montreal-2018">
+        <p style="display:none" class="hbs-mo18-don">
+            {{mo18Donations}}
+        </p>
+        <p style="display:none" class="hbs-mo18-don-daily">
+            {{mo18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-mo18-reg">
+            {{mo18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-mo18-regs-daily">
+            {{mo18RegFeeDaily}}
+        </p>
+        <p style="display:none" class="hbs-mo18-crews">
+            {{mo18Crews}}
+        </p>
+        <p style="display:none" class="hbs-mo18-crews-daily">
+            {{mo18CrewDaily}}
+        </p>
+        <p style="display:none" class="hbs-mo18-riders">
+            {{mo18Riders}}
+        </p>
+        <p style="display:none" class="hbs-mo18-riders-daily">
+            {{mo18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-mo18-rfi">
+            {{mo18RFI}}
+        </p>
+        <p style="display:none" class="hbs-mo18-rfi-daily">
+            {{mo18RFIDaily}}
+        </p>
+    </div>
+    <!--END Montreal 2018 -->
+    <!-- Montreal 2017 -->
+    <div class="montreal-2017">
+        <p style="display:none" class="hbs-mo17-don">
+            {{mo17Donations}}
+        </p>
+        <p style="display:none" class="hbs-mo17-don-daily">
+            {{mo17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-mo17-reg">
+            {{mo17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-mo17-crews">
+            {{mo17Crews}}
+        </p>
+        <p style="display:none" class="hbs-mo17-riders">
+            {{mo17Riders}}
+        </p>
+        <p style="display:none" class="hbs-mo17-rfi">
+            {{mo17RFI}}
+        </p>
+    </div>
+    <!--END Montreal 2017 -->
+    <!-- Vancouver 2018 -->
+    <div class="vancouver-2018">
+        <p style="display:none" class="hbs-va18-don">
+            {{va18Donations}}
+        </p>
+        <p style="display:none" class="hbs-va18-don-daily">
+            {{va18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-va18-reg">
+            {{va18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-va18-regs-daily">
+            {{va18RegFeeDaily}}
+        </p>
+        <p style="display:none" class="hbs-va18-crews">
+            {{va18Crews}}
+        </p>
+        <p style="display:none" class="hbs-va18-crews-daily">
+            {{va18CrewDaily}}
+        </p>
+        <p style="display:none" class="hbs-va18-riders">
+            {{va18Riders}}
+        </p>
+        <p style="display:none" class="hbs-va18-rfi">
+            {{va18RFI}}
+        </p>
+        <p style="display:none" class="hbs-va18-riders-daily">
+            {{va18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-va18-rfi-daily">
+            {{va18RFIDaily}}
+        </p>
+    </div>
+    <!--END Vancouver 2018 -->
+    <!-- Vancouver 2017 -->
+    <div class="vancouver-2017">
+        <p style="display:none" class="hbs-va17-don">
+            {{va17Donations}}
+        </p>
+        <p style="display:none" class="hbs-va17-don-daily">
+            {{va17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-va17-reg">
+            {{va17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-va17-crews">
+            {{va17Crews}}
+        </p>
+        <p style="display:none" class="hbs-va17-riders">
+            {{va17Riders}}
+        </p>
+        <p style="display:none" class="hbs-va17-rfi">
+            {{va17RFI}}
+        </p>
+    </div>
+    <!--END Vancouver 2017 -->
+    <!-- Alberta 2018 -->
+    <div class="alberta-2018">
+        <p style="display:none" class="hbs-ab18-don">
+            {{ab18Donations}}
+        </p>
+        <p style="display:none" class="hbs-ab18-don-daily">
+            {{ab18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-ab18-reg">
+            {{ab18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-ab18-regs-daily">
+            {{ab18RegFeeDaily}}
+        </p>
+        <p style="display:none" class="hbs-ab18-crews">
+            {{ab18Crews}}
+        </p>
+        <p style="display:none" class="hbs-ab18-crews-daily">
+            {{ab18CrewDaily}}
+        </p>
+        <p style="display:none" class="hbs-ab18-riders">
+            {{ab18Riders}}
+        </p>
+        <p style="display:none" class="hbs-ab18-riders-daily">
+            {{ab18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-ab18-rfi">
+            {{ab18RFI}}
+        </p>
+        <p style="display:none" class="hbs-ab18-rfi-daily">
+            {{ab18RFIDaily}}
+        </p>
+    </div>
+    <!--END Alberta 2018 -->
+    <!-- Alberta 2017 -->
+    <div class="alberta-2017">
+        <p style="display:none" class="hbs-ab17-don">
+            {{ab17Donations}}
+        </p>
+        <p style="display:none" class="hbs-ab17-don-daily">
+            {{ab17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-ab17-reg">
+            {{ab17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-ab17-crews">
+            {{ab17Crews}}
+        </p>
+        <p style="display:none" class="hbs-ab17-riders">
+            {{ab17Riders}}
+        </p>
+        <p style="display:none" class="hbs-ab17-rfi">
+            {{ab17RFI}}
+        </p>
+    </div>
+    <!--END Alberta 2017 -->
+    <!-- OneWalk Toronto 2018 -->
+    <div class="ow-toronto-2018">
+        <p style="display:none" class="hbs-owto18-don">
+            {{owTo18Donations}}
+        </p>
+        <p style="display:none" class="hbs-owto18-don-daily">
+            {{owto18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-owto18-walkers">
+            {{owTo18Walkers}}
+        </p>
+         <p style="display:none" class="hbs-owto18-walkers-daily">
+            {{owto18WalkersDaily}}
+        </p>
+        <p style="display:none" class="hbs-owto18-night">
+            {{owTo18NightWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto18-2day">
+            {{owTo182day}}
+        </p>
+        <p style="display:none" class="hbs-owto18-15km">
+            {{owTo1815kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto18-25km">
+            {{owTo1825kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto18-40km">
+            {{owTo1840kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto18-reg">
+            {{owTo18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-owto18-regs-daily">
+            {{owto18RegDaily}}
+        </p>
+        <p style="display:none" class="hbs-owto18-crews">
+            {{owTo18Crews}}
+        </p>
+        <p style="display:none" class="hbs-owto18-crews-daily">
+            {{owTo18CrewsDaily}}
+        </p>
+        <p style="display:none" class="hbs-owto18-rfi">
+            {{owTo18RFI}}
+        </p>
+        <p style="display:none" class="hbs-owto18-rfi-daily">
+            {{owto18RFIDaily}}
+        </p>
+    </div>
+    <!--END OneWalk Toronto 2018 -->
+    <!-- OneWalk Toronto 2017 -->
+    <div class="ow-toronto-2017">
+        <p style="display:none" class="hbs-owto17-don">
+            {{owTo17Donations}}
+        </p>
+        <p style="display:none" class="hbs-owto17-don-daily">
+            {{owto17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-owto17-walkers">
+            {{owTo17Walkers}}
+        </p>
+        <p style="display:none" class="hbs-owto17-15km">
+            {{owTo1715kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto17-25km">
+            {{owTo1725kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto17-40km">
+            {{owTo1740kmWalkers}}
+        </p>
+        <p style="display:none" class="hbs-owto17-reg">
+            {{owTo17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-owto17-crews">
+            {{owTo17Crews}}
+        </p>
+        <p style="display:none" class="hbs-owto17-rfi">
+            {{owTo17RFI}}
+        </p>
+    </div>
+    <!--END OneWalk Toronto 2017 -->
+    <!-- Ride Perth 2018 -->
+    <div class="perth-2018">
+        <p style="display:none" class="hbs-pr18-don">
+            {{pr18Donations}}
+        </p>
+        <p style="display:none" class="hbs-pr18-don-daily">
+            {{pr18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-pr18-reg">
+            {{pr18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-pr18-regs-daily">
+            {{pr18RegFeeDaily}}
+        </p>
+        <p style="display:none" class="hbs-pr18-crews">
+            {{pr18Crews}}
+        </p>
+        <p style="display:none" class="hbs-pr18-crews-daily">
+            {{pr18CrewDaily}}
+        </p>
+        <p style="display:none" class="hbs-pr18-riders">
+            {{pr18Riders}}
+        </p>
+        <p style="display:none" class="hbs-pr18-riders-daily">
+            {{pr18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-pr18-rfi">
+            {{pr18RFI}}
+        </p>
+        <p style="display:none" class="hbs-pr18-rfi-daily">
+            {{pr18RFIDaily}}
+        </p>
+    </div>
+    <!--END Ride Perth 2018 -->
+    <!-- Ride Perth 2017 -->
+    <div class="perth-2017">
+        <p style="display:none" class="hbs-pr17-don">
+            {{pr17Donations}}
+        </p>
+        <p style="display:none" class="hbs-pr17-don-daily">
+            {{pr17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-pr17-reg">
+            {{pr17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-pr17-crews">
+            {{pr17Crews}}
+        </p>
+        <p style="display:none" class="hbs-pr17-riders">
+            {{pr17Riders}}
+        </p>
+        <p style="display:none" class="hbs-pr17-rfi">
+            {{pr17RFI}}
+        </p>
+    </div>
+    <!--END Ride Perth 2017 -->
+    <!-- OneDay Melbourne 2018 -->
+    <div class="melbourne-2018">
+        <p style="display:none" class="hbs-ml18-don">
+            {{ml18Donations}}
+        </p>
+        <p style="display:none" class="hbs-ml18-don-daily">
+            {{ml18DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-ml18-reg">
+            {{ml18RegFee}}
+        </p>
+        <p style="display:none" class="hbs-ml18-regs-daily">
+            {{ml18RegDaily}}
+        </p>
+        <p style="display:none" class="hbs-ml18-riders">
+            {{ml18Riders}}
+        </p>
+        <p style="display:none" class="hbs-ml18-riders-daily">
+            {{ml18RidersDaily}}
+        </p>
+        <p style="display:none" class="hbs-ml18-walkers">
+            {{ml18Walkers}}
+        </p>
+    </div>
+    <!--END OneDay Melbourne 2018 -->
+    <!-- OneDay Melbourne 2018 -->
+    <div class="melbourne-2017">
+        <p style="display:none" class="hbs-ml17-don">
+            {{ml17Donations}}
+        </p>
+        <p style="display:none" class="hbs-ml17-don-daily">
+            {{ml17DonDaily}}
+        </p>
+        <p style="display:none" class="hbs-ml17-reg">
+            {{ml17RegFee}}
+        </p>
+        <p style="display:none" class="hbs-ml17-riders">
+            {{ml17Riders}}
+        </p>
+        <p style="display:none" class="hbs-ml17-walkers">
+            {{ml17Walkers}}
+        </p>
+    </div>
+</div>
+<!--END OneDay Melbourne 2018 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/app/bundle.js"></script>
+</body>
+</html>

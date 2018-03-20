@@ -1,0 +1,136 @@
+<div *ngIf="dataService.data" class="table-responsive gradient-tbl">
+   <h1>OneDay Melbourne</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>RFI</th>
+          <th>WALKERS</th>
+          <th>RIDERS</th>
+          <th>DON$</th>
+          <th>REG$</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+        <tr>
+          <th>Year</th>
+          <th>RFI</th>
+          <th>WALKERS</th>
+          <th>RIDERS</th>
+          <th>DON$</th>
+          <th>REG$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2018 (Today)</td>
+          <td>Not Applicable</td>
+          <td>{{dataService.data.ml18WalkersDaily}}</td>
+          <td>{{dataService.data.ml18RidersDaily}}</td>
+          <td>{{dataService.data.ml18DonDaily}}</td>
+          <td>{{dataService.data.ml18RegDaily}}</td>
+        </tr>
+        <tr>
+          <td>2018 (YTD)</td>
+          <td>Not Applicable</td>
+          <td>{{dataService.data.ml18Walkers}}</td>
+          <td>{{dataService.data.ml18Riders}}</td>
+          <td>{{dataService.data.ml18Donations}}</td>
+          <td>{{dataService.data.ml18RegFee}}</td>
+        </tr>
+        <tr>
+          <td>2017 (YTD)</td>
+          <td>Not Applicable</td>
+          <td>{{dataService.data.ml17Walkers}}</td>
+          <td>{{dataService.data.ml17Riders}}</td>
+          <td>{{dataService.data.ml17Donations}}</td>
+          <td>{{dataService.data.ml17RegFee}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Melbourne Historical Data -->
+<div class="historical-container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Historical Data</h3>
+      <p>Please select a date to view data from that date.</p>
+    </div>
+    <div class="col-12">
+      <mat-form-field>
+        <input [min]="minDate" [max]="maxDate" [ngModel]="myDate" (dateChange)="dateChange()" matInput #datePicker [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<!-- Historical Data Table -->
+<div class="row rs-row" *ngIf="dataService.allData[0]?.ml18Riders">
+  <div class="col-12">
+    <h4>Results for {{dataService.myDate}}</h4>
+  </div>
+</div>
+<div *ngIf="dataService.allData[0]?.ml18Riders" class="table-responsive gradient-tbl historical-tbl">
+  <h1>Melbourne Historical</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+      <tr>
+        <th>YEAR</th>
+        <th>RFI</th>
+        <th>WALKERS</th>
+        <th>RIDERS</th>
+        <th>DON$</th>
+        <th>REG$</th>
+      </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+      <tr>
+        <th>YEAR</th>
+        <th>RFI</th>
+        <th>WALKERS</th>
+        <th>RIDERS</th>
+        <th>DON$</th>
+        <th>REG$</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2018</td>
+        <td>Not Applicable</td>
+        <td>{{dataService.allData[0]?.ml18Walkers}}</td>
+        <td>{{dataService.allData[0]?.ml18Riders}}</td>
+        <td>{{dataService.allData[0]?.ml18Donations}}</td>
+        <td>{{dataService.allData[0]?.ml18RegFee}}</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>Not Applicable</td>
+        <td>{{dataService.allData[0]?.ml17Walkers}}</td>
+        <td>{{dataService.allData[0]?.ml17Riders}}</td>
+        <td>{{dataService.allData[0]?.ml17Donations}}</td>
+        <td>{{dataService.allData[0]?.ml17RegFee}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row rs-row" *ngIf="!dataService.allData[0]?.ml18Riders">
+  <div class="col-12">
+    <div class="h2">No data found or selected. Please try again.</div>
+  </div>
+</div>

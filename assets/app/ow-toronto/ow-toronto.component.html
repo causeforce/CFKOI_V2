@@ -1,0 +1,245 @@
+<div *ngIf="dataService.data" class="table-responsive gradient-tbl ow-to-table">
+   <h1>OneWalk Toronto</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Walkers</th>
+          <th>NightWalk</th>
+          <th>2dayWalk</th>
+          <th>15kmWalk</th>
+          <th>25kmWalk</th>
+          <th>40kmWalk</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+        <tr>
+          <th>Year</th>
+          <th>Walkers</th>
+          <th>NightWalk</th>
+          <th>2dayWalk</th>
+          <th>15kmWalk</th>
+          <th>25kmWalk</th>
+          <th>40kmWalk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2018 (TODAY)</td>
+          <td>{{dataService.data.owto18WalkersDaily}}</td>
+          <td>{{dataService.data.owto18NightWalkersDaily}}</td>
+          <td>{{dataService.data.owto182dayDaily}}</td>
+          <td>{{dataService.data.owto1815kmWalkersDaily}}</td>
+          <td>{{dataService.data.owto1825kmWalkersDaily}}</td>
+          <td>{{dataService.data.owto1840kmWalkersDaily}}</td>
+        </tr>
+        <tr>
+          <td>2018 (YTD)</td>
+          <td>{{dataService.data.owTo18Walkers}}</td>
+          <td>{{dataService.data.owTo18NightWalkers}}</td>
+          <td>{{dataService.data.owTo182day}}</td>
+          <td>{{dataService.data.owTo1815kmWalkers}}</td>
+          <td>{{dataService.data.owTo1825kmWalkers}}</td>
+          <td>{{dataService.data.owTo1840kmWalkers}}</td>
+        </tr>
+        <tr>
+          <td>2017 (YTD)</td>
+          <td>{{dataService.data.owTo17Walkers}}</td>
+          <td>NONE</td>
+          <td>NONE</td>
+          <td>{{dataService.data.owTo1715kmWalkers}}</td>
+          <td>{{dataService.data.owTo1725kmWalkers}}</td>
+          <td>{{dataService.data.owTo1740kmWalkers}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="dataService.data" class="table-responsive gradient-tbl ow-to-table">
+   <h1>OneWalk Toronto</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>RFI</th>
+          <th>CRW</th>
+          <th>DON$</th>
+          <th>REG$</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+        <tr>
+          <th>Year</th>
+          <th>RFI</th>
+          <th>CRW</th>
+          <th>DON$</th>
+          <th>REG$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2018 (TODAY)</td>
+          <td>{{dataService.data.owto18RFIDaily}}</td>
+          <td>{{dataService.data.owto18CrewsDaily}}</td>
+          <td>{{dataService.data.owto18DonDaily}}</td>
+          <td>{{dataService.data.owto18RegDaily}}</td>
+        </tr>
+        <tr>
+          <td>2018 (YTD)</td>
+          <td>{{dataService.data.owTo18RFI}}</td>
+          <td>{{dataService.data.owTo18Crews}}</td>
+          <td>{{dataService.data.owTo18Donations}}</td>
+          <td>{{dataService.data.owTo18RegFee}}</td>
+        </tr>
+        <tr>
+          <td>2017 (YTD)</td>
+          <td>{{dataService.data.owTo17RFI}}</td>
+          <td>{{dataService.data.owTo17Crews}}</td>
+          <td>{{dataService.data.owTo17Donations}}</td>
+          <td>{{dataService.data.owTo17RegFee}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- OneWalk Historical Data -->
+<div class="historical-container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Historical Data</h3>
+      <p>Please select a date to view data from that date.</p>
+    </div>
+    <div class="col-12">
+      <mat-form-field>
+        <input [min]="minDate" [max]="maxDate" [ngModel]="myDate" (dateChange)="dateChange()" matInput #datePicker [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<!-- Historical Data Table -->
+<div class="row rs-row" *ngIf="dataService.allData[0]">
+  <div class="col-12">
+    <h4>Results for {{dataService.myDate}}</h4>
+  </div>
+</div>
+<div *ngIf="dataService.allData[0]" class="table-responsive gradient-tbl historical-tbl">
+  <h1>OneWalk Historical</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+      <tr>
+        <th>YEAR</th>
+        <th>Walkers</th>
+        <th>NightWalk</th>
+        <th>2dayWalk</th>
+        <th>15kmWalk</th>
+        <th>25kmWalk</th>
+        <th>40kmWalk</th>
+      </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+      <tr>
+        <th>YEAR</th>
+        <th>Walkers</th>
+        <th>NightWalk</th>
+        <th>2dayWalk</th>
+        <th>15kmWalk</th>
+        <th>25kmWalk</th>
+        <th>40kmWalk</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2018</td>
+        <td>{{dataService.allData[0]?.owTo18Walkers}}</td>
+        <td>{{dataService.allData[0]?.owTo18NightWalkers}}</td>
+        <td>{{dataService.allData[0]?.owTo182day}}</td>
+        <td>{{dataService.allData[0]?.owTo1815kmWalkers}}</td>
+        <td>{{dataService.allData[0]?.owTo1825kmWalkers}}</td>
+        <td>{{dataService.allData[0]?.owTo1840kmWalkers}}</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>{{dataService.allData[0]?.owTo17Walkers}}</td>
+        <td>NONE</td>
+        <td>NONE</td>
+        <td>{{dataService.allData[0]?.owTo1715kmWalkers}}</td>
+        <td>{{dataService.allData[0]?.owTo1725kmWalkers}}</td>
+        <td>{{dataService.allData[0]?.owTo1740kmWalkers}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br />
+<!-- Historical Data Table 2 -->
+<div *ngIf="dataService.allData[0]" class="table-responsive gradient-tbl historical-tbl">
+  <h1>OneWalk Historical</h1>
+  <div class="tbl-header">
+    <table class="gradient-tbl" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+      <tr>
+        <th>Year</th>
+        <th>RFI</th>
+        <th>CRW</th>
+        <th>DON$</th>
+        <th>REG$</th>
+      </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead class="tbl-hdr-mobile">
+      <tr>
+        <th>Year</th>
+        <th>RFI</th>
+        <th>CRW</th>
+        <th>DON$</th>
+        <th>REG$</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2018</td>
+        <td>{{dataService.allData[0]?.owTo18RFI}}</td>
+        <td>{{dataService.allData[0]?.owTo18Crews}}</td>
+        <td>{{dataService.allData[0]?.owTo18Donations}}</td>
+        <td>{{dataService.allData[0]?.owTo18RegFee}}</td>
+      </tr>
+      <tr>
+        <td>2017</td>
+        <td>{{dataService.allData[0]?.owTo17RFI}}</td>
+        <td>{{dataService.allData[0]?.owTo17Crews}}</td>
+        <td>{{dataService.allData[0]?.owTo17Donations}}</td>
+        <td>{{dataService.allData[0]?.owTo17RegFee}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row rs-row" *ngIf="dataService.noData === true">
+  <div class="col-12">
+    <div class="h2">Sorry, there was no data found for this date!</div>
+  </div>
+</div>

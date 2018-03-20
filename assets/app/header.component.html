@@ -1,0 +1,50 @@
+<header>
+	<div class="row justify-content-md-center">
+		<nav class="col col-md-8">
+			<ul class="nav nav-pills">
+				<a *ngIf="!isLoggedIn()" class="navbar-brand" href="/"><img src="/img/koi_logo_v2.svg" alt="Koi Logo"></a>
+				<a *ngIf="isLoggedIn()" class="navbar-brand" href="/alltables"><img src="/img/koi_logo_v2.svg" alt="Koi Logo"></a>
+				<p class="navbar-brand"> version: 1.01</p>
+	<!--             <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['/auth']">Sign Up / Sign In</a></li> -->
+				<li routerLinkActive="active" *ngIf="!isLoggedIn()"><button mat-raised-button color="primary" [routerLink]="['/signin']">Sign In</button></li>
+				<li class="home-btn" routerLinkActive="active" *ngIf="isLoggedIn()"><button mat-raised-button color="primary" [routerLink]="['/alltables']">Home</button></li>
+				<li class="logout-btn" *ngIf="isLoggedIn()"><button mat-raised-button color="warn" (click)="onLogout()">Logout</button></li>
+			</ul>
+		</nav>
+	</div>
+
+    <div *ngIf="isLoggedIn()" class="row">
+	  <div class="col-12">
+	    <button class="btn-view">View Table Menu</button>
+	  </div>
+	</div>
+	<br>
+    <div class="row all-buttons-row">
+	    <div class="col-12">
+	        <h3 class="text-center">Choose location &amp; event:</h3>
+	    </div>
+	</div>
+	<div class="row all-buttons-row">
+	    <div class="col-md-3">
+	        <h4 class="text-center">All</h4>
+	        <button (click)="showHideTables('all')" class="center-block btn btn-success all-btn">Display All Events</button>
+	    </div>
+	    <div class="col-md-3">
+	        <h4 class="text-center">Ride</h4>
+	        <button (click)="showHideTables('alberta') && dataService.toggleState()" class="btn btn-primary alberta-btn">Alberta</button>
+	        <button (click)="showHideTables('toronto') && dataService.toggleState()" class="btn btn-primary toronto-btn">Toronto</button>
+	        <button (click)="showHideTables('montreal')" class="btn btn-primary montreal-btn">Montreal</button>
+	        <button (click)="showHideTables('vancouver')" class="btn btn-primary vancouver-btn">Vancouver</button>
+	        <button (click)="showHideTables('perth')" class="btn btn-primary perth-btn">Perth</button>
+	    </div>
+	    <div class="col-md-3">
+	        <h4 class="text-center">OneWalk</h4>
+	        <button (click)="showHideTables('onewalk')"  class="btn btn-ow ow-toronto-btn">Toronto</button>
+	    </div>
+	    <div class="col-md-3">
+	        <h4 class="text-center">OneDay</h4>
+	        <button (click)="showHideTables('brisbane')" class="btn btn-od brisbane-btn">Brisbane</button>
+	        <button (click)="showHideTables('melbourne')"  class="btn btn-od melbourne-btn">Melbourne</button>
+	    </div>
+	</div>
+</header>
