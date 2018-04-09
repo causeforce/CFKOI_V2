@@ -66,6 +66,7 @@ import { PerthComponent } from "./perth/perth.component";
 import { OWTorontoComponent } from "./ow-toronto/ow-toronto.component";
 import { MelbourneComponent } from "./melbourne/melbourne.component";
 import { BrisbaneComponent } from "./brisbane/brisbane.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 import { routing } from "./app.routing";
@@ -141,7 +142,8 @@ export class AngularMaterialModule {}
         PerthComponent,
         OWTorontoComponent,
         MelbourneComponent,
-        BrisbaneComponent
+        BrisbaneComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,

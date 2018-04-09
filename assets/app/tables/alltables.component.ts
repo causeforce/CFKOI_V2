@@ -3,10 +3,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
 import { AuthService } from "../auth/auth.service";
-import { DataService } from './../data.service';
+import { DataService } from '../data.service';
 
-import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { HttpClient } from '@angular/common/http';
 
 import { MatSidenavModule } from '@angular/material';
@@ -15,9 +13,6 @@ import { SlideInOutAnimation } from '../animation';
 
 import * as $ from 'jquery';
 
-import { trigger, state, style, transition,
-    animate, group, query, stagger, keyframes
-} from '@angular/animations';
 @Component({
     selector: 'all-tables',
     templateUrl: './alltables.component.html',
