@@ -212,8 +212,9 @@ router.get('/data', function(req, res) {
 				                                            var to18VRDaily = locals.getEventTotal.toronto.to18.virtual - yesterday[0].to18VR
 				                                            var to18Riders2Daily = locals.getEventTotal.toronto.to18.riders2 - yesterday[0].to18Riders2;
 				                                            var to18OneDayDaily = locals.getEventTotal.toronto.to18.oneday - yesterday[0].to18OneDay;
+                                                            var to18OneDayDaily2 = locals.getEventTotal.toronto.to18.oneday2 - yesterday[0].to18OneDay2;
 
-				                                            var to18TotalParticipants = parseFloat(locals.getEventTotal.toronto.to18.riders) + parseFloat(locals.getEventTotal.toronto.to18.riders2) + parseFloat(locals.getEventTotal.toronto.to18.oneday);
+				                                            var to18TotalParticipants = parseFloat(locals.getEventTotal.toronto.to18.riders) + parseFloat(locals.getEventTotal.toronto.to18.riders2) + parseFloat(locals.getEventTotal.toronto.to18.oneday) + parseFloat(locals.getEventTotal.toronto.to18.oneday2);
 
 				                                            var to18TotalRiders = locals.getEventTotal.toronto.to18.riders;
 
@@ -316,6 +317,7 @@ router.get('/data', function(req, res) {
 			                                                latestdata.to18VR = locals.getEventTotal.toronto.to18.virtual;
 			                                                latestdata.to18Riders2 = locals.getEventTotal.toronto.to18.riders2;
                                                 			latestdata.to18OneDay = locals.getEventTotal.toronto.to18.oneday;
+                                                            latestdata.to18OneDay2 = locals.getEventTotal.toronto.to18.oneday2;
                                                 			latestdata.to18TotalParticipants = to18TotalParticipants;
 			                                                
 			                                                latestdata.to17Donations = locals.getEventTotal.toronto.to17.totalDonation;

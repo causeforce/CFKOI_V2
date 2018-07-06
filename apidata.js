@@ -30,6 +30,7 @@ promise.then(function(db) {
         to18Riders: String,
         to18Riders2: String,
         to18OneDay: String,
+        to18OneDay2: String,
         to18VR: String,
         to18TotalParticipants: String,
         mo18Donations: String,
@@ -354,7 +355,7 @@ promise.then(function(db) {
                                             var to18Riders2Daily = locals.getEventTotal.toronto.to18.riders2 - data.to18Riders2;
                                             var to18OneDayDaily = locals.getEventTotal.toronto.to18.oneday - data.to18OneDay;
 
-                                            var to18TotalParticipants = parseFloat(locals.getEventTotal.toronto.to18.riders) + parseFloat(locals.getEventTotal.toronto.to18.riders2) + parseFloat(locals.getEventTotal.toronto.to18.oneday);
+                                            var to18TotalParticipants = parseFloat(locals.getEventTotal.toronto.to18.riders) + parseFloat(locals.getEventTotal.toronto.to18.riders2) + parseFloat(locals.getEventTotal.toronto.to18.oneday) + parseFloat(locals.getEventTotal.toronto.to18.oneday2);
 
                                             var to18TotalRiders = locals.getEventTotal.toronto.to18.riders;
 
@@ -459,6 +460,7 @@ promise.then(function(db) {
                                                 to18VR: locals.getEventTotal.toronto.to18.virtual,
                                                 to18Rider2: locals.getEventTotal.toronto.to18.riders2,
                                                 to18OneDay: locals.getEventTotal.toronto.to18.oneday,
+                                                to18OneDay2: locals.getEventTotal.toronto.to18.oneday2,
                                                 to18TotalParticipants: to18TotalParticipants,
                                                 
                                                 to17Donations: locals.getEventTotal.toronto.to17.totalDonation,

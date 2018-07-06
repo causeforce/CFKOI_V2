@@ -12,6 +12,7 @@ var dataSchema = new Schema({
     to18Riders: String,
     to18Riders2: String,
     to18OneDay: String,
+    to18OneDay2: String,
     to18VR: String,
     to18TotalParticipants: String,
     mo18Donations: String,
